@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff4040"
+        android:id="@+id/splash_activity_root_view">
+    <ImageView
+            android:id="@+id/splash_activity_big_logo_view"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            app:srcCompat="@drawable/logo_white_big"
+            android:layout_centerInParent="true" />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/splash_activity_facebook_login_btn"
+            android:layout_width="250dp"
+            android:layout_height="64dp"
+            android:text="페이스북으로 로그인"
+            android:layout_marginBottom="78dp"
+            app:backgroundTint="#FFFFFF"
+            android:elevation="8dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:alpha="0"
+            android:textColor="#ff4040"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:cornerRadius="4dp"/>
+</RelativeLayout>
