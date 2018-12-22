@@ -1,5 +1,6 @@
 package ios.android.installable.youthquare.features.register
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ios.android.installable.youthquare.R
@@ -12,6 +13,11 @@ class RegisterInformationActivity: AppCompatActivity() {
 
         register_information_back_button.setOnClickListener {
             finish()
+        }
+
+        register_information_next_btn.setOnClickListener {
+            val recognitionIntent = Intent(this@RegisterInformationActivity, GovernmentIDVerificationActivity::class.java)
+            startActivity(recognitionIntent)
         }
     }
 }

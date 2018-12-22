@@ -26,6 +26,9 @@
         <activity android:name=".features.register.RegisterInformationActivity"
                   android:theme="@style/AppTheme.WhiteBackground" />
 
+        <activity android:name=".features.register.GovernmentIDVerificationActivity"
+                  android:theme="@style/AppTheme.Camera" />
+
         <activity android:name=".MainActivity"/>
 
         <!-- FACEBOOK LOGIN -->

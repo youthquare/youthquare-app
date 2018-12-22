@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:clipToPadding="true">
+    <RelativeLayout
+            android:id="@+id/government_id_camera_statusbar_margin_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    <FrameLayout
+            android:id="@+id/government_id_camera_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.otaliastudios.cameraview.CameraView
+                android:id="@+id/cameraView"
+                android:keepScreenOn="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+    </FrameLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/government_id_camera_statusbar_margin_container">
+        <ImageView android:id="@+id/government_id_camera_cancel_button"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   app:srcCompat="@drawable/ic_close"
+                   android:padding="12dp"
+                   android:clickable="true"
+                   android:foreground="?attr/selectableItemBackground"/>
+        <ImageView android:id="@+id/government_id_camera_flash_button"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   app:srcCompat="@drawable/ic_flash"
+                   android:layout_alignParentRight="true"
+                   android:padding="12dp"
+                   android:clickable="true"
+                   android:foreground="?attr/selectableItemBackground"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shadow_top_to_bottom"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shadow_bottom_to_top"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:layout_above="@+id/camera_shutter_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:text="사진, 성명, 생년월일, 발급일자가\n잘 보이도록 찍어주세요."
+    />
+    <ImageButton
+            android:id="@+id/camera_shutter_view"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/camera_shutter"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="64dp"/>
+
+    <RelativeLayout
+            android:id="@+id/progress_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#50000000">
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>
