@@ -16,11 +16,7 @@
 
         <activity android:name=".features.splash.SplashActivity"
                   android:theme="@style/AppTheme.NoActionbar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <activity android:name=".features.register.RegisterInformationActivity"
@@ -29,7 +25,17 @@
         <activity android:name=".features.register.GovernmentIDVerificationActivity"
                   android:theme="@style/AppTheme.Camera" />
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".features.card.main.MainActivity"
+                  android:theme="@style/AppTheme.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".features.news.ExpandNewsActivity"
+                  android:theme="@style/AppTheme.Expand" />
 
         <!-- FACEBOOK LOGIN -->
         <meta-data android:name="com.facebook.sdk.ApplicationId"

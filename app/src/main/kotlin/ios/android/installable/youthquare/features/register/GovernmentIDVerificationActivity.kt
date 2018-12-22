@@ -16,6 +16,7 @@ import permissions.dispatcher.RuntimePermissions
 import android.util.DisplayMetrics
 import android.os.Build
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Handler
 import android.util.Log
@@ -25,6 +26,7 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.otaliastudios.cameraview.CameraListener
 import com.otaliastudios.cameraview.Flash
 import ios.android.installable.youthquare.extension.bitmap
+import ios.android.installable.youthquare.features.card.main.MainActivity
 
 @RuntimePermissions
 class GovernmentIDVerificationActivity: AppCompatActivity() {
@@ -125,8 +127,9 @@ class GovernmentIDVerificationActivity: AppCompatActivity() {
                     dialog.setMessage("${name} (${birthYear}년 ${birthMonth}월 ${birthDay}일생)\n확인되었습니다.")
                     dialog.setCancelable(false)
                     dialog.setPositiveButton("확인") { dialog, which ->
-                        progress_overlay.visibility = View.GONE
-                        dialog.dismiss()
+                        val mainIntent = Intent(this@GovernmentIDVerificationActivity, MainActivity::class.java)
+                        startActivity(mainIntent)
+                        finish()
                     }
                     dialog.show()
                 } else if (words[0].startsWith("학생증")) {
@@ -141,8 +144,9 @@ class GovernmentIDVerificationActivity: AppCompatActivity() {
                         dialog.setMessage("${name} (${birthYear}년 ${birthMonth}월 ${birthDay}일생)\n확인되었습니다.")
                         dialog.setCancelable(false)
                         dialog.setPositiveButton("확인") { dialog, which ->
-                            progress_overlay.visibility = View.GONE
-                            dialog.dismiss()
+                            val mainIntent = Intent(this@GovernmentIDVerificationActivity, MainActivity::class.java)
+                            startActivity(mainIntent)
+                            finish()
                         }
                         dialog.show()
                     } catch(e: Exception) {

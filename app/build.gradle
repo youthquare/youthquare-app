@@ -41,6 +41,7 @@ dependencies {
     kapt 'com.github.hotchemi:permissionsdispatcher-processor:4.1.0'
 
     implementation 'com.otaliastudios:cameraview:1.6.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
