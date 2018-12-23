@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -76,6 +77,7 @@ class CardStackAdapter(
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val mainCard: CardView = view.findViewById(R.id.card_news_root_layout)
+        val progressBar: ProgressBar = view.findViewById(R.id.card_news_progress_bar)
         val backgroundImage: ImageView = view.findViewById(R.id.news_card_background_image)
         val categoryContainer: RelativeLayout = view.findViewById(R.id.card_news_category_container)
         val categoryText: TextView = view.findViewById(R.id.card_news_category_text)

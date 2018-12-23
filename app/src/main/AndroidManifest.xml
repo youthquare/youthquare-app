@@ -12,11 +12,17 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
+            tools:replace="android:appComponentFactory"
+            android:appComponentFactory="whateverString"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".features.splash.SplashActivity"
                   android:theme="@style/AppTheme.NoActionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
         <activity android:name=".features.register.RegisterInformationActivity"
@@ -27,15 +33,14 @@
 
         <activity android:name=".features.card.main.MainActivity"
                   android:theme="@style/AppTheme.Main">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <activity android:name=".features.news.ExpandNewsActivity"
                   android:theme="@style/AppTheme.Expand" />
+
+        <activity android:name=".features.opinion.OpinionDetailActivity"
+                  android:theme="@style/AppTheme.DetailOpinion" />
 
         <!-- FACEBOOK LOGIN -->
         <meta-data android:name="com.facebook.sdk.ApplicationId"

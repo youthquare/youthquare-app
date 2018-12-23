@@ -72,6 +72,18 @@
                 />
             </LinearLayout>
         </RelativeLayout>
+        <ProgressBar
+                android:id="@+id/card_news_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_in"
+                android:indeterminateTint="@android:color/white"
+                android:visibility="gone"/>
         <LinearLayout
                 android:id="@+id/card_news_bottom_three_summary_container"
                 android:layout_width="match_parent"
@@ -81,18 +93,40 @@
                 android:padding="24dp"
                 android:orientation="vertical">
             <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
                     app:srcCompat="@drawable/ic_comment"/>
             <TextView
                     android:id="@+id/three_summary_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
+                    android:textSize="12sp"
                     android:layout_marginTop="10dp"
                     android:textColor="#b4b4b4"
                     android:text="민주당이 &apos;사회적 대타협 기구&apos;를 통해 &apos;카풀문제&apos;를 해결하겠다는 의지를 밝혔지만 택시업계는 타협기구참여의 전제로 &apos;카풀앱&apos;의 중단을 요구하고 있다"
             />
+            <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginTop="40dp"-->
+                    <!--android:textColor="#222222"-->
+                    <!--android:text="가장 인기있는 주장" />-->
+            <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@drawable/opinion_outline_background"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:layout_marginTop="5dp">-->
+                <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="#222222"-->
+                        <!--android:text="‘카풀 앱은 시민들의 공공 편의를 위해 절대로 중단되면 안됩니다.’" />-->
+            <!--</RelativeLayout>-->
         </LinearLayout>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

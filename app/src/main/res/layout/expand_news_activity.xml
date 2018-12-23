@@ -1,69 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent" android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:background="@android:color/white">
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="300dp">
-        <RelativeLayout
-                android:id="@+id/expand_news_statusbar_container"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                tools:ignore="Suspicious0dp"/>
-        <RelativeLayout
-                android:id="@+id/expand_news_actionbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
-            <ImageButton
-                    android:id="@+id/expand_news_back_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    app:srcCompat="@drawable/ic_arrow_back_white"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="12dp"/>
-        </RelativeLayout>
-        <ImageView
-                android:id="@+id/expand_news_background_image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                        android:background="@drawable/shadow_bottom_to_top"/>
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="@android:color/white">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="300dp">
             <RelativeLayout
-                    android:id="@+id/expand_news_category_container"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:background="@drawable/category_background"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-                <TextView
-                        android:id="@+id/expand_news_category_text"
+                    android:id="@+id/expand_news_statusbar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    tools:ignore="Suspicious0dp"/>
+            <ImageView
+                    android:id="@+id/expand_news_background_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/shadow_bottom_to_top"/>
+            <RelativeLayout
+                    android:id="@+id/expand_news_actionbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@+id/expand_news_statusbar_container">
+                <ImageButton
+                        android:id="@+id/expand_news_back_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="경제 / 사회"
-                        android:textSize="12dp"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"/>
+                        android:background="@null"
+                        app:srcCompat="@drawable/ic_arrow_back_white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"/>
             </RelativeLayout>
-            <TextView
-                    android:id="@+id/expand_news_title_text"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginBottom="14dp"
-                    android:layout_width="wrap_content"
+            <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#ffffff"
-                    tools:text="택시, 사회적타협기구 참여전제로&apos;先 카풀앱중단&apos; 요구"
-            />
-        </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp">
+                <RelativeLayout
+                        android:id="@+id/expand_news_category_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/category_background"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                    <TextView
+                            android:id="@+id/expand_news_category_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="경제 / 사회"
+                            android:textSize="12dp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"/>
+                </RelativeLayout>
+                <TextView
+                        android:id="@+id/expand_news_title_text"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        tools:text="택시, 사회적타협기구 참여전제로&apos;先 카풀앱중단&apos; 요구"
+                />
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/expand_news_goto_external_link"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="14dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="8dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                <ImageView
+                        android:id="@+id/expand_news_real_link_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_outline_new_releases"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="24dp"/>
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/expand_news_real_link_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기사 읽고오기"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기사를 읽고 오셔야 토론에 참가할 수 있습니다."
+                            android:textSize="12dp"
+                            android:textColor="#b4b4b4"
+                            android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_arrow_forward_black"
+                        android:layout_marginRight="24dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="이 토픽에 대한 주장들"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/expand_news_opinion_list"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+    </LinearLayout>
+</ScrollView>
